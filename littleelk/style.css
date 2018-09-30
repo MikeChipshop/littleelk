@@ -39,13 +39,6 @@ body, html,
     height:100%;
     min-height:100%;
 }
-body {
-	font-family: 'Open Sans', sans-serif;
-	font-size:16px;
-	color:#707070;
-	line-height:1.3;
-    background-color:#f1f1f1;
-}
 .lesp_splash-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -62,4 +55,141 @@ body {
     font-family:"frente_h1regular";
     font-size: 60px;
     padding-top:10px;
+}
+
+/* ------------------------------------------------
+ Global
+------------------------------------------------ */
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size:16px;
+	color:#707070;
+	line-height:1.3;
+    background-color:#f1f1f1;
+}
+.lesp_wrap {
+    width:100%;
+    max-width:1450px;
+    padding:0px 20px;
+    margin:0px auto;
+}
+
+/* ------------------------------------------------
+ Header
+------------------------------------------------ */
+.lesp_global-header {
+    border: 1px solid #ccc;
+    padding: 40px 0px;
+}
+.lesp_global-header .lesp_wrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.lesp_logo {
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+}
+.lesp_header-flair {
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+    text-align:right;
+}
+
+/* ------------------------------------------------
+ Main Navigation
+------------------------------------------------ */
+.lesp_global-nav {
+    -webkit-box-flex:3;
+    -ms-flex:3;
+    flex:3;
+    text-align:center;
+}
+.lesp_global-nav ul {
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+.lesp_global-nav li {
+
+}
+.lesp_global-nav a {
+    text-decoration:none;
+    display:block;
+    padding:10px;
+    color: #1d1d1d;
+}
+
+/* ------------------------------------------------
+ Front Page
+------------------------------------------------ */
+.lesp_front-page-main {
+    padding:60px 0px;
+}
+.lesp_fp-section-title {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.lesp_front-page-main section ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+    -ms-flex-flow:row wrap;
+    flex-flow:row wrap;
+    margin: 0px -10px;
+}
+.lesp_front-page-main section ul li {
+    -ms-flex-preferred-size:33.333%;
+    flex-basis:33.333%;
+    padding: 10px;
+}
+.lesp_front-page-main section ul li a {
+    background-color: #fff;
+    display: block;
+    color: #696969;
+    text-decoration: none;
+}
+.lesp_front-page-main section ul li a h2 {
+    padding:20px;
+}
+.lesp_image-wrap {
+    background-color: #bfbfbf;
+}
+.lesp_image-wrap img {
+    width:100%;
+    max-width:100%;
+    height:auto;
+    display:block;
+}
+
+/* ------------------------------------------------
+ Footer
+------------------------------------------------ */
+.lesp_global-footer {
+    padding:60px 0px;
+    border: 1px solid #ccc;
+}
+.lesp_global-footer .lesp_wrap:nth-of-type(2){
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 }
