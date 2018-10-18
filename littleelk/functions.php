@@ -260,3 +260,9 @@ function __THEME_PREFIX__wp_head() {
 </script>
 <?php
 }
+
+function lesp_woocommerce_account_menu_items_callback($items) {
+    unset( $items['downloads'] );
+    return $items;
+}
+add_filter('woocommerce_account_menu_items', 'lesp_woocommerce_account_menu_items_callback', 10, 1);

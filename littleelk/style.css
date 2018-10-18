@@ -65,21 +65,32 @@ body {
 	font-size:16px;
 	color:#707070;
 	line-height:1.3;
-    background-color:#f1f1f1;
+    background-color:#f9f9f9;
 }
 .lesp_wrap {
     width:100%;
-    max-width:1450px;
+    max-width:1420px;
     padding:0px 20px;
     margin:0px auto;
+}
+.lesp_page-wrap {
+    margin: 0 auto;
+    max-width: 1420px;
+    width: 100%;
+    padding: 0px 20px;
+}
+.lesp_page-title {
+    padding-top: 40px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /* ------------------------------------------------
  Header
 ------------------------------------------------ */
 .lesp_global-header {
-    border: 1px solid #ccc;
-    padding: 40px 0px;
+    padding: 0px 0px;
+    background-color:#fff;
 }
 .lesp_global-header .lesp_wrap {
     display: -webkit-box;
@@ -91,11 +102,26 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    background: url(img/village.png) no-repeat right center;
+    background-size: contain;
 }
 .lesp_logo {
     -webkit-box-flex:1;
     -ms-flex:1;
     flex:1;
+}
+.lesp_logo a {
+    text-decoration: none;
+    color: #361419;
+}
+.lesp_logo h1 {
+    font-family: 'frente_h1regular';
+    font-size: 80px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 1;
+    padding: 20px 0px;
 }
 .lesp_header-flair {
     -webkit-box-flex:1;
@@ -179,11 +205,116 @@ body {
 }
 
 /* ------------------------------------------------
+ Woo - My Account
+------------------------------------------------ */
+
+.lesp_account-content {
+    width: 100%;
+    max-width: 1420px;
+    margin: 0 auto;
+    padding: 40px 0px 60px 0px;
+}
+.woocommerce-account .woocommerce-MyAccount-content {
+    float: none;
+    width: 100%;
+    border-radius: 0px 4px 4px 4px;
+}
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    float: none;
+    width: 100%;
+}
+.woocommerce-MyAccount-navigation ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+.woocommerce-MyAccount-navigation li {
+    border-radius: 0px 6px 0px 0px;
+}
+li.woocommerce-MyAccount-navigation-link.is-active a {
+    border-bottom: 1px solid #fff;
+}
+nav.woocommerce-MyAccount-navigation a {
+    padding: 10px 20px;
+    display: block;
+    background-color: #fcfcfc;
+    text-decoration: none;
+    color: #838383;
+    font-size: 14px;
+    border-top: 1px solid #ededed;
+    border-radius: 0px 4px 0px 0px;
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    -webkit-transition:all .2s ease-in-out;
+    -o-transition:all .2s ease-in-out;
+    transition:all .2s ease-in-out;
+}
+nav.woocommerce-MyAccount-navigation li:first-child a {
+    border-left: 1px solid #ededed;
+}
+nav.woocommerce-MyAccount-navigation li.is-active:first-child a {
+    border-left: 1px solid #fff;
+}
+nav.woocommerce-MyAccount-navigation li:last-child a {
+    color: #e5252d;
+    background-color: #fff5f5;
+    border-top: 1px solid #ffe2e4;
+    border-right: 1px solid #ffe2e4;
+
+}
+nav.woocommerce-MyAccount-navigation li:last-child a:hover {
+    background-color: #fff1f1;
+}
+nav.woocommerce-MyAccount-navigation li.is-active a {
+    background-color: #fff;
+    color: #565656;
+    cursor:default;
+}
+nav.woocommerce-MyAccount-navigation a:hover {
+    background-color: #ffffff;
+}
+.woocommerce-MyAccount-content {
+    padding: 60px 40px;
+    background-color: #fff;
+    line-height: 1.4;
+}
+.woocommerce-MyAccount-content a {
+    text-decoration: none;
+    color: #b9b9b9;
+}
+
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+}
+.edit {
+    border: 1px solid #ccc;
+    padding: 5px 18px;
+    border-radius: 10px;
+    font-size: 14px;
+}
+a.edit:hover {
+    color: #000;
+}
+.woocommerce-Addresses {
+    padding-top:40px;
+}
+.woocommerce-account .addresses .title h3 {
+    font-weight: 600;
+}
+.required {
+    display:none;
+}
+
+/* ------------------------------------------------
  Footer
 ------------------------------------------------ */
 .lesp_global-footer {
     padding:60px 0px;
-    border: 1px solid #ccc;
+    background-color:#fff;
 }
 .lesp_global-footer .lesp_wrap:nth-of-type(2){
     display: -webkit-box;
