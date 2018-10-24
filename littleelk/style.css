@@ -102,8 +102,8 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: url(img/village.png) no-repeat right center;
-    background-size: contain;
+    /*background: url(img/village.png) no-repeat right center;
+    background-size: contain; */
 }
 .lesp_logo {
     -webkit-box-flex:1;
@@ -181,15 +181,15 @@ body {
     margin: 0px -10px;
 }
 .lesp_front-page-main section ul li {
-    -ms-flex-preferred-size:33.333%;
-    flex-basis:33.333%;
+    -ms-flex-preferred-size:25%;
+    flex-basis:25%;
     padding: 10px;
 }
 .lesp_front-page-main section ul li a {
-    background-color: #fff;
     display: block;
     color: #696969;
     text-decoration: none;
+    text-align:center;
 }
 .lesp_front-page-main section ul li a h2 {
     padding:20px;
@@ -218,6 +218,12 @@ body {
     float: none;
     width: 100%;
     border-radius: 0px 4px 4px 4px;
+}
+.woocommerce-account .woocommerce-MyAccount-content p {
+    padding-bottom:20px;
+}
+.woocommerce-account .woocommerce-MyAccount-content p:last-child {
+    padding-bottom:0px;
 }
 .woocommerce-account .woocommerce-MyAccount-navigation {
     float: none;
