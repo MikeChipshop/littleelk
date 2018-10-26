@@ -89,7 +89,7 @@ body {
  Header
 ------------------------------------------------ */
 .lesp_global-header {
-    padding: 0px 0px;
+    padding: 20px 0px;
     background-color:#fff;
 }
 .lesp_global-header .lesp_wrap {
@@ -102,13 +102,13 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    background: url(img/village.png) no-repeat right center;
-    background-size: contain;
+    text-align:center;
 }
 .lesp_logo {
-    -webkit-box-flex:1;
-    -ms-flex:1;
-    flex:1;
+    margin:0 auto;
+}
+.lesp_logo img {
+    max-width:200px;
 }
 .lesp_logo a {
     text-decoration: none;
@@ -116,28 +116,21 @@ body {
 }
 .lesp_logo h1 {
     font-family: 'frente_h1regular';
-    font-size: 80px;
+    font-size: 70px;
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 500;
     line-height: 1;
-    padding: 20px 0px;
-}
-.lesp_header-flair {
-    -webkit-box-flex:1;
-    -ms-flex:1;
-    flex:1;
-    text-align:right;
+    text-align: center;
+    padding: 0px;
 }
 
 /* ------------------------------------------------
  Main Navigation
 ------------------------------------------------ */
 .lesp_global-nav {
-    -webkit-box-flex:3;
-    -ms-flex:3;
-    flex:3;
     text-align:center;
+    background-color: #3a6373;
 }
 .lesp_global-nav ul {
     display:-webkit-box;
@@ -147,15 +140,16 @@ body {
     -ms-flex-pack: center;
     justify-content: center;
 }
-.lesp_global-nav li {
-
-}
 .lesp_global-nav a {
     text-decoration:none;
-    display:block;
     padding:10px;
-    color: #1d1d1d;
+    color: #fff;
+    display:block;
 }
+.lesp_global-nav a:hover {
+    color: #e2c33b;
+}
+
 
 /* ------------------------------------------------
  Front Page
@@ -181,8 +175,8 @@ body {
     margin: 0px -10px;
 }
 .lesp_front-page-main section ul li {
-    -ms-flex-preferred-size:33.333%;
-    flex-basis:33.333%;
+    -ms-flex-preferred-size:25%;
+    flex-basis:25%;
     padding: 10px;
 }
 .lesp_front-page-main section ul li a {

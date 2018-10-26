@@ -29,6 +29,14 @@
                         <h2>Product name</h2>
                     </a>
                 </li>
+                <li>
+                    <a href="#">
+                        <div class="lesp_image-wrap">
+                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/test.jpg">
+                        </div>
+                        <h2>Product name</h2>
+                    </a>
+                </li>
             </ul>
         </div>
     </section>

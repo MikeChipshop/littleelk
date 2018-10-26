@@ -27,12 +27,16 @@
     <div class="lesp_wrap">
         <div class="lesp_logo">
             <a href="<?php bloginfo('url'); ?>" title="Back to Little Elk home">
+                <div class="lesp_header-image">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/village.png">
+                </div>
                 <h1>Little Elk</h1>
             </a>
         </div>
-        <nav class="lesp_global-nav">
-            <ul><?php wp_nav_menu( array('theme_location' => 'main_menu' )); ?></ul>
-        </nav>
-        <div class="lesp_header-flair"></div>
     </div>
 </header>
+<nav class="lesp_global-nav">
+    <div class="lesp_wrap">
+        <ul><?php wp_nav_menu( array('theme_location' => 'main_menu' )); ?></ul>
+    </div>
+</nav>
