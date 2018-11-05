@@ -13,7 +13,8 @@ if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' 
 /***************************************************/
 
 if ( function_exists( 'add_image_size' ) ) {
-	add_image_size( 'regular-square', 500, 500, array( 'center', 'center' ));
+    add_image_size( 'regular-square', 500, 500, array( 'center', 'center' ));
+    add_image_size( 'home-square', 380, 380, array( 'center', 'center' ));
 }
 
 /****************************************************

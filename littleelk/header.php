@@ -19,36 +19,45 @@
     <meta name="twitter:creator" content="@littleelkshop" />
     <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/www.littleelk.uk\/","name":"Little Elk","potentialAction":{"@type":"SearchAction","target":"https:\/\/www.littleelk.uk\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
     <script type='application/ld+json'>{"@context":"https:\/\/schema.org","@type":"Organization","url":"https:\/\/www.littleelk.uk\/","sameAs":["https:\/\/www.facebook.com\/littleelkshop\/","https:\/\/www.instagram.com\/littleelkshop","https:\/\/twitter.com\/littleelkshop"],"@id":"https:\/\/www.littleelk.uk\/#organization","name":"Little Elk","logo":"https:\/\/www.littleelk.uk\/assets\/logos\/yellow-doll.png"}</script>
-<?php wp_head(); ?>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/solid.css" integrity="sha384-YIyAArzQv8q6Av1kr9cwxHhFcfNBUaolJindR2XO8E3OLp6z3d8My3oWLd33ET7M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.5.0/css/fontawesome.css" integrity="sha384-srL3Qh9R/n855m4o5fegS//B2q0R1md7z6ndDYaPj8iEp0j0IuKdFVWMY0JosKPF" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.typekit.net/wim5xii.css">
+    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 
 <header class="lesp_global-header">
     <div class="lesp_wrap">
+        <div class="lesp_site-title">
+            <h1><a href="<?php bloginfo('url'); ?>" title="Back to Little Elk home">Little Elk</a></h1>
+        </div>
         <div class="lesp_logo">
             <a href="<?php bloginfo('url'); ?>" title="Back to Little Elk home">
-<<<<<<< HEAD
                 <div class="lesp_header-image">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/img/village.png">
-=======
-                <div class="lesp_header-village">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/img/website-village.png">
->>>>>>> 205e90c82b1ef2506a76b4da5b51e674af905cdd
                 </div>
-                <h1>Little Elk</h1>
             </a>
         </div>
-<<<<<<< HEAD
-=======
-        <!-- <nav class="lesp_global-nav">
-            <ul><?php wp_nav_menu( array('theme_location' => 'main_menu' )); ?></ul>
-        </nav>
--->
->>>>>>> 205e90c82b1ef2506a76b4da5b51e674af905cdd
     </div>
 </header>
-<nav class="lesp_global-nav">
+<div class="lesp_global-nav">
     <div class="lesp_wrap">
-        <ul><?php wp_nav_menu( array('theme_location' => 'main_menu' )); ?></ul>
+        <div class="lesp_header-social">
+            <ul>
+                <li><a href="#">I</a></li>
+                <li><a href="#">F</a></li>
+                <li><a href="#">T</a></li>
+            </ul>
+        </div>
+        <nav><ul><?php wp_nav_menu( array('theme_location' => 'main_menu' )); ?></ul></nav>
+        <div class="lesp_header-sub-nav">
+            <ul>
+                <li><a href="#" class="lesp-header-sub-search"><i class="fas fa-search"></i></a></li>
+                <li><a href="#" class="lesp-header-sub-heart"><i class="fas fa-heart"></i></a></li>
+                <li><a href="#" class="lesp-header-sub-bag"><i class="fas fa-shopping-bag"></i></a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
     </div>
-</nav>
+</div>
+<div class="lesp_nav-announcement"><a href="#">Psssst...We Have Some News <i class="fas fa-comment"></i></a></div>
