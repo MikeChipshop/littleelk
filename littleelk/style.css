@@ -601,8 +601,10 @@ nav.woocommerce-MyAccount-navigation a:hover {
 .woocommerce form .form-row textarea {
     font-size: 16px;
     padding: 10px;
-    border: none;
-    border-bottom: 1px solid #ccc;
+    border: 1px solid #707070;
+    border-radius: 20px;
+    max-width:340px;
+    width:100%;
 }
 .edit {
     border: 1px solid #ccc;
@@ -621,6 +623,29 @@ a.edit:hover {
 }
 .required {
     display:none;
+}
+
+.woocommerce form.login,
+.woocommerce form.register {
+    border:none;
+}
+.woocommerce form.login label,
+.woocommerce form.register label {
+    font-size:20px;
+}
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+    background-color: #E2C33B;
+    border: none;
+    font-size: 24px;
+    color: #413B3B;
+    padding: 12px 21px;
+    margin-top: 24px;
+    display: block;
+    border-radius: 28px;
+    cursor: pointer;
 }
 
 /* ------------------------------------------------
