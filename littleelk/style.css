@@ -541,6 +541,7 @@ position: relative;
     padding-bottom:10px;
     padding-top:40px;
     display:block;
+    color:#ffffff;
 }
 
 
@@ -707,6 +708,15 @@ a.edit:hover {
     border-radius: 28px;
     cursor: pointer;
 }
+
+/* Woo Single Products */
+.woocommerce .single-product {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0px 20px;
+}
+
 
 /* ------------------------------------------------
  Footer
