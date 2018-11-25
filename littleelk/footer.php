@@ -7,6 +7,27 @@
         <div><img src="<?php bloginfo('stylesheet_directory'); ?>/img/payment-providers.png" alt="Payment Providers"></div>
     </div>
 </footer>
+<section class="lesp_newsletter-popup">
+    <div class="lesp_newsletter-popup-container">
+        <button class="lesp_popup-toggle">X</button>
+        <div class="lesp_newsletter-popup-form">
+            <div class="lesp_newsletter-popup-image">
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/newsletter-house.svg">
+            </div>
+            <div class="lesp_newsletter-popup-form-wrap">
+                <form>
+                    <label for="email">Email</label>
+                    <input type="email" name="email">
+                    <input type="submit" value="Subscribe">
+                </form>
+            </div>
+        </div>
+        <div class="lesp_newsletter-popup-content">
+            <p>Sign up to our monthly newsletter and get 10% off of your first order.</p>
+            <p>You will also be the first to hear about our monthly giveaways and new products.</p>
+        </div>
+    </div>
+</section>
 <?php wp_footer(); ?>
 </body>
 </html>

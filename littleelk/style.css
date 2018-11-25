@@ -391,8 +391,41 @@ position: relative;
 
 .lesp_newsletter-popup {
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    height: 100%;
+    background: rgba(255,255,255,.9);
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition-property: opacity, visibility;
+    -o-transition-property: opacity, visibility;
+    transition-property: opacity, visibility;
+    -webkit-transition-duration: .4s, 0s;
+    -o-transition-duration: .4s, 0s;
+    transition-duration: .4s, 0s;
+    -webkit-transition-delay: 0s, .4s;
+    -o-transition-delay: 0s, .4s;
+    transition-delay: 0s, .4s;
+}
+.lesp_popup-open .lesp_newsletter-popup {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transition-delay: 0s, 0s;
+    -o-transition-delay: 0s, 0s;
+    transition-delay: 0s, 0s;
 }
 .lesp_newsletter-popup-container {
     background-color: #3A6373;
@@ -411,6 +444,33 @@ position: relative;
     -webkit-border-radius: 260px;
     border-radius: 160px;
     padding: 26px 55px;
+    position:relative;
+}
+.lesp_newsletter-popup-container button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    margin: 0px;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #e2c33b;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    cursor:pointer;
 }
 .lesp_newsletter-popup-form {
     -webkit-box-flex: 1;
@@ -438,7 +498,7 @@ position: relative;
     content: '';
     position: absolute;
     bottom: 0;
-    left: 20%;
+    left: 30%;
     width: 0;
     height: 0;
     border: 100px solid transparent;

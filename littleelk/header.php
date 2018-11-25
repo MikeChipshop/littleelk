@@ -60,4 +60,4 @@
         </div>
     </div>
 </div>
-<div class="lesp_nav-announcement"><a href="#">Psssst...We Have Some News <i class="fas fa-comment"></i></a></div>
+<div class="lesp_nav-announcement"><a href="#" class="lesp_popup-toggle">Psssst...We Have Some News <i class="fas fa-comment"></i></a></div>
