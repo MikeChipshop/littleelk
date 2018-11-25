@@ -453,6 +453,8 @@ position: relative;
     width:100%;
     max-width:200px;
     height:auto;
+    margin: 0px auto;
+    display: block;
 }
 .lesp_newsletter-popup-form-wrap input[type="email"]{
     border: none;
@@ -464,17 +466,18 @@ position: relative;
     width:100%;
 }
 .lesp_newsletter-popup-form-wrap input[type="submit"]{
-    background-color: #E177A0;
+    background-color: #E2C33B;
     border: none;
     font-size: 24px;
     color: #413B3B;
     padding: 12px 21px;
-    margin-top:24px;
-    display:block;
-    margin:24px auto 0px auto;
+    margin-top: 24px;
+    display: block;
+    border-radius: 28px;
+    cursor: pointer;
 }
 .lesp_newsletter-popup-form-wrap label {
-    font-size: 30px;
+    font-size: 25px;
     padding-bottom:10px;
     padding-top:40px;
     display:block;
