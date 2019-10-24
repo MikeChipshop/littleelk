@@ -262,8 +262,30 @@ function __THEME_PREFIX__wp_head() {
 <?php
 }
 
+/****************************************************
+Shop Functions
+*****************************************************/
+
+// Declare Support
+function lesp_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+    add_theme_support( 'wc-product-gallery-zoom' );
+    add_theme_support( 'wc-product-gallery-lightbox' );
+    add_theme_support( 'wc-product-gallery-slider' );
+}
+add_action( 'after_setup_theme', 'lesp_add_woocommerce_support' );
+
+// Remove Downloads
 function lesp_woocommerce_account_menu_items_callback($items) {
     unset( $items['downloads'] );
     return $items;
 }
 add_filter('woocommerce_account_menu_items', 'lesp_woocommerce_account_menu_items_callback', 10, 1);
+
+// Remove sidebar from single product pages
+function lesp_remove_sidebar_product_pages() {
+    if ( is_product() ) {
+    remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+    }
+}
+add_action( 'wp', 'lesp_remove_sidebar_product_pages' );

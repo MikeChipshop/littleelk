@@ -11,13 +11,13 @@ License: Private
 /* ------------------------------------------------
  HTML5 Reset
 ------------------------------------------------ */
-html{ box-sizing: border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,
+html{ -webkit-box-sizing: border-box; box-sizing: border-box;}html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,
 legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{border:0;font-family:inherit;font-size:100%;
 font-style:inherit;font-weight:inherit;margin:0;outline:0;padding:0;vertical-align: baseline}:focus{/* remember to define focus styles! */outline:0}body{background:#fff;line-height:1}ol,ul{list-style: none}
 table{/* tables still need 'cellspacing="0"' in the markup */border-collapse:separate;border-spacing:0}caption,th,td{font-weight:normal;text-align:left}blockquote:before,blockquote:after,q:before,q:after{content: ""}
 blockquote,q{quotes: "" ""}a img{border: 0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display: block}.clear{clear:both}.clearfix:after{content:".";visibility:hidden;display:block;height:0;
 clear:both}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,main{display:block}strong{font-weight:bold;}em{font-style:italic}del{text-decoration: line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-*, *:after, *:before {box-sizing:border-box;}
+*, *:after, *:before {-webkit-box-sizing:border-box;box-sizing:border-box;}
 
 /* ------------------------------------------------
  Fonts
@@ -30,24 +30,14 @@ clear:both}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav
     font-style: normal;
 
 }
+@font-face {
+    font-family: 'LittleElk';
+    src: url('fonts/littleelk-webfont.woff2') format('woff2'),
+         url('fonts/littleelk-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 
-/*
-## Brandon Grotesque Regular ##
-font-family: brandon-grotesque, sans-serif;
-font-weight: 390;
-font-style: normal;
-
-## Brandon Grotesque Bold ##
-
-font-family: brandon-grotesque, sans-serif;
-font-weight: 450;
-font-style: normal;
-
-## CarlMarx Bold ##
-font-family: carlmarx, sans-serif;
-font-weight: 700;
-font-style: normal;
-*/
+}
 
 /* ------------------------------------------------
  Splash
@@ -60,13 +50,16 @@ body, html,
 .lesp_splash-wrap {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: center;
+            justify-content: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
+    -webkit-align-items: center;
+            align-items: center;
     text-align: center;
 }
 .lesp_splash-cont h1 {
@@ -89,13 +82,13 @@ body {
 }
 .lesp_wrap {
     width:100%;
-    max-width:1200px;
+    max-width:1480px;
     padding:0px 20px;
     margin:0px auto;
 }
 .lesp_page-wrap {
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1480px;
     width: 100%;
     padding: 0px 20px;
 }
@@ -116,11 +109,12 @@ body {
 ------------------------------------------------ */
 .lesp_global-header {
     padding: 20px 0px 0px 0px;
-    background-color:#fff;
+    background-color:#3b6473;
 }
 .lesp_global-header .lesp_wrap {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
@@ -130,6 +124,7 @@ body {
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
     align-items: flex-end;
+    max-width: 1480px;
 }
 .lesp_site-title {
     padding-bottom:25px;
@@ -138,20 +133,21 @@ body {
     -ms-flex: 1;
     flex: 1;
     font-size:90px;
-    font-family: carlmarx, sans-serif;
+    font-family: "LittleElk", sans-serif;
     text-transform:uppercase;
 }
 .lesp_site-title a {
-    color: #413B3B;
+    color: #e1c23c;
     text-decoration: none;
     font-weight: bold;
+    letter-spacing: 6px;
 }
 .lesp_logo {
     width: 100%;
-    max-width: 434px;
+    max-width: 260px;
 }
 .lesp_logo img {
-    max-width: 434px;
+    max-width: 260px;
     display: block;
     width: 100%;
 }
@@ -190,6 +186,7 @@ body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    max-width:1480px;
 }
 .lesp_header-social {
     -webkit-box-flex: 1;
@@ -240,10 +237,12 @@ position: relative;
 .lesp_global-nav ul {
     display:-webkit-box;
     display:-ms-flexbox;
+    display:-webkit-flex;
     display:flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
     -ms-flex-align: end;
@@ -252,7 +251,7 @@ position: relative;
 .lesp_global-nav a {
     text-decoration:none;
     padding:5px 10px;
-    color: #fff;
+    color: #3b6473;
     display:block;
     font-size:20px;
     font-weight:bold;
@@ -285,7 +284,7 @@ position: relative;
     padding-top: 70px;
 }
 .lesp_home-hero-container {
-    height:300px;
+    height:500px;
     background-color:#ffffff;
     display:-webkit-box;
     display:-webkit-flex;
@@ -299,8 +298,6 @@ position: relative;
     -webkit-align-items:center;
     -ms-flex-align:center;
     align-items:center;
-    background: url(https://www.littleelk.uk/wp-content/uploads/2018/10/il_570xN.1654151216_7im2-380x380.jpg) no-repeat center center;
-    background-size: cover;
 }
 .lesp_front-page-main {
     padding:60px 0px;
@@ -324,14 +321,17 @@ position: relative;
 .lesp_front-page-main section ul {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
     -webkit-box-orient:horizontal;
     -webkit-box-direction:normal;
     -ms-flex-flow:row wrap;
-    flex-flow:row wrap;
+    -webkit-flex-flow:row wrap;
+            flex-flow:row wrap;
     margin: 0px -10px;
 }
 .lesp_global-nav nav ul {
@@ -456,6 +456,7 @@ position: relative;
     margin: 0px;
     display:-webkit-flex;
     display:-ms-flexbox;
+    display:-webkit-box;
     display:flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -467,7 +468,8 @@ position: relative;
     align-items: center;
     background-color: #e2c33b;
     border: none;
-    border-radius: 20px;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
     font-weight: bold;
     font-size: 20px;
     cursor:pointer;
@@ -484,7 +486,8 @@ position: relative;
     color: #413B3B;
     font-size: 30px;
     padding: 90px 54px;
-    border-radius: 200px;
+    -webkit-border-radius: 200px;
+            border-radius: 200px;
     width: 100%;
     max-width: 590px;
     text-align: center;
@@ -493,6 +496,7 @@ position: relative;
     -ms-flex: 1;
     flex: 1;
     position:relative;
+    font-weight:bold;
 }
 .lesp_newsletter-popup-content:after {
     content: '';
@@ -507,7 +511,9 @@ position: relative;
     border-left: 0;
     margin-left: -70px;
     margin-bottom: -64px;
-    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
+        -ms-transform: rotate(20deg);
+            transform: rotate(20deg);
 }
 .lesp_newsletter-popup-image img {
     width:100%;
@@ -521,7 +527,8 @@ position: relative;
     background-color: #fff;
     font-size: 22px;
     padding: 16px;
-    border-radius: 33px;
+    -webkit-border-radius: 33px;
+            border-radius: 33px;
     display: block;
     width:100%;
 }
@@ -533,7 +540,8 @@ position: relative;
     padding: 12px 21px;
     margin-top: 24px;
     display: block;
-    border-radius: 28px;
+    -webkit-border-radius: 28px;
+            border-radius: 28px;
     cursor: pointer;
 }
 .lesp_newsletter-popup-form-wrap label {
@@ -544,10 +552,18 @@ position: relative;
     color:#ffffff;
 }
 
-
+/* ------------------------------------------------
+ Woo Global
+------------------------------------------------ */
+.woocommerce .content-area {
+    margin:0 auto;
+    padding:40px 20px;
+    max-width:1480px;
+    width:100%;
+}
 /* ------------------------------------------------
  Temp Hidden Woo Elements
------------------------------------------------- */
+------------------------------------------------
 
 .woocommerce-result-count,
 .woocommerce-ordering {
@@ -573,6 +589,7 @@ ul.products li.product a {
 .woocommerce ul.products li.product a img {
     margin:0px;
 }
+*/
 /* ------------------------------------------------
  Woo - My Account
 ------------------------------------------------ */
@@ -586,7 +603,8 @@ ul.products li.product a {
 .woocommerce-account .woocommerce-MyAccount-content {
     float: none;
     width: 100%;
-    border-radius: 0px 4px 4px 4px;
+    -webkit-border-radius: 0px 4px 4px 4px;
+            border-radius: 0px 4px 4px 4px;
 }
 .woocommerce-account .woocommerce-MyAccount-content p {
     padding-bottom:20px;
@@ -601,10 +619,12 @@ ul.products li.product a {
 .woocommerce-MyAccount-navigation ul {
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
 }
 .woocommerce-MyAccount-navigation li {
-    border-radius: 0px 6px 0px 0px;
+    -webkit-border-radius: 0px 6px 0px 0px;
+            border-radius: 0px 6px 0px 0px;
 }
 li.woocommerce-MyAccount-navigation-link.is-active a {
     border-bottom: 1px solid #fff;
@@ -617,7 +637,8 @@ nav.woocommerce-MyAccount-navigation a {
     color: #838383;
     font-size: 14px;
     border-top: 1px solid #ededed;
-    border-radius: 0px 4px 0px 0px;
+    -webkit-border-radius: 0px 4px 0px 0px;
+            border-radius: 0px 4px 0px 0px;
     border-right: 1px solid #ededed;
     border-bottom: 1px solid #ededed;
     -webkit-transition:all .2s ease-in-out;
@@ -663,14 +684,16 @@ nav.woocommerce-MyAccount-navigation a:hover {
     font-size: 16px;
     padding: 10px;
     border: 1px solid #707070;
-    border-radius: 20px;
+    -webkit-border-radius: 20px;
+            border-radius: 20px;
     max-width:340px;
     width:100%;
 }
 .edit {
     border: 1px solid #ccc;
     padding: 5px 18px;
-    border-radius: 10px;
+    -webkit-border-radius: 10px;
+            border-radius: 10px;
     font-size: 14px;
 }
 a.edit:hover {
@@ -705,18 +728,108 @@ a.edit:hover {
     padding: 12px 21px;
     margin-top: 24px;
     display: block;
-    border-radius: 28px;
+    -webkit-border-radius: 28px;
+            border-radius: 28px;
     cursor: pointer;
 }
 
-/* Woo Single Products */
+/* ------------------------------------------------
+ Woo - Single Products
+------------------------------------------------ */
 .woocommerce .single-product {
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
     padding: 0px 20px;
 }
-
+.woocommerce div.product .product_title {
+    font-family: carlmarx, sans-serif;
+    font-size: 28px;
+}
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+    color: #77a464;
+    font-size: 20px;
+    font-weight:bold;
+    padding-bottom:20px;
+}
+.woocommerce-product-details__short-description {
+    font-size:18px;
+}
+.woocommerce-product-details__short-description p {
+    padding-bottom:10px;
+}
+.woocommerce-product-details__short-description p:last-child {
+    padding-bottom:0px;
+}
+.woocommerce-product-details__short-description ul,
+.woocommerce-product-details__short-description ol {
+    padding-left: 20px;
+    padding-bottom:20px;
+}
+.woocommerce-product-details__short-description li {
+    padding-bottom:5px;
+}
+.woocommerce-product-details__short-description ul {
+    list-style-type:disc;
+}
+.woocommerce-product-details__short-description ol {
+    list-style-type:decimal;
+}
+.woocommerce-product-details__short-description a,
+.summary.entry-summary .product_meta a {
+    color:#e1c23c;
+    text-decoration:none;
+}
+.woocommerce div.product form.cart {
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+}
+.woocommerce div.product form.cart div.quantity {
+    float: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #3b6473;
+    overflow: hidden;
+}
+.woocommerce div.product div.images .flex-control-thumbs li {
+    padding:4px;
+}
+.flex-viewport {
+    margin-bottom:4px;
+}
+/* .woocommerce .quantity input::-webkit-outer-spin-button,
+.woocommerce .quantity input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} */
+.woocommerce .quantity input[type=number] {
+    /* -moz-appearance:textfield; */
+    border:none;
+    background-color:transparent;
+    font-size:20px;
+    font-weight:bold;
+    color:#fff;
+    width: 48px;
+}
+.woocommerce div.product form.cart .button {
+    float:none;
+    margin-top:0px;
+    font-size: 16px;
+    background-color:#e1c23c;
+}
 
 /* ------------------------------------------------
  Footer
@@ -728,8 +841,10 @@ a.edit:hover {
 .lesp_global-footer .lesp_wrap:nth-of-type(2){
     display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
-    justify-content: space-between;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
 }

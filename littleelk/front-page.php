@@ -1,9 +1,10 @@
 <?php get_header(); ?>
-
 <section class="lesp_home-hero">
     <div class="lesp_wrap">
         <div class="lesp_home-hero-container">
-            Hero
+            <a href="#">
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/banner.png">
+            </a>
         </div>
     </div>
 </section>
@@ -44,6 +45,7 @@
         </div>
     </section>
 
+    <!--
 <?php
 
 // The query
@@ -80,6 +82,7 @@ $args = array(
             <?php else: ?>
             No content in loop
 <?php endif; ?>
+-->
 
     <section class="lesp_instagram-list">
         <div class="lesp_wrap">
