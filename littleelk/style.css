@@ -201,11 +201,12 @@ body {
     display: flex;
 }
 .lesp_nav-announcement {
-    position: fixed;
+    position: absolute;
     top: 0px;
     width: 100%;
     text-align: center;
     font-weight:bold;
+    z-index:9999;
 }
 .lesp_nav-announcement a {
 position: relative;
@@ -561,6 +562,44 @@ position: relative;
     max-width:1480px;
     width:100%;
 }
+.woocommerce .woocommerce-breadcrumb {
+    font-size:18px;
+}
+.woocommerce .woocommerce-breadcrumb a {
+    display: inline-block;
+    background-color: #e1c23c;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    margin-right:10px;
+    -webkit-transition:all .4s ease-in-out;
+    -o-transition:all .4s ease-in-out;
+    transition:all .4s ease-in-out;
+    border: 1px solid #e1c23c;
+}
+.woocommerce .woocommerce-breadcrumb a:hover {
+    background-color: #fff;
+    color: #e1c23c;
+}
+.woocommerce .woocommerce-breadcrumb .lesp_breadcrumb-title {
+    display: inline-block;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #e1c23c;
+}
+.orderby {
+    border: 1px solid #3b6473;
+    color: #3b6473;
+    font-size: 18px;
+    padding: 5px;
+    border-radius: 10px;
+}
 /* ------------------------------------------------
  Temp Hidden Woo Elements
 ------------------------------------------------
@@ -734,6 +773,23 @@ a.edit:hover {
 }
 
 /* ------------------------------------------------
+ Woo - Product Archives
+------------------------------------------------ */
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    color: #3b6473;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.woocommerce ul.products li.product .price {
+    text-align: center;
+    font-size: 18px;
+}
+.woocommerce ul.products li.product .price del {
+    color: #d82b50;
+}
+
+/* ------------------------------------------------
  Woo - Single Products
 ------------------------------------------------ */
 .woocommerce .single-product {
@@ -800,7 +856,8 @@ a.edit:hover {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
-    border-radius: 50%;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
     background-color: #3b6473;
     overflow: hidden;
 }
