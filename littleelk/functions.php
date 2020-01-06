@@ -23,10 +23,23 @@ ENQUEUES
 function les_load_scripts() {
 
 	wp_register_script( 'site-common', get_template_directory_uri() . '/js/site-common.js', array('jquery'),'null',true  );
-	wp_register_style( 'main-css', get_template_directory_uri() . '/style.css','',time(), 'screen' );
+    wp_register_style( 'main-css', get_template_directory_uri() . '/style.css','',time(), 'screen' );
+    wp_register_style( 'fa', get_template_directory_uri() . '/css/fontawesome.min.css','','', 'screen' );
+    wp_register_style( 'fa-all', get_template_directory_uri() . '/css/all.min.css','','', 'screen' );
+    wp_register_style( 'fa-brand', get_template_directory_uri() . '/css/brands.min.css','','', 'screen' );
+    wp_register_style( 'fa-light', get_template_directory_uri() . '/css/light.min.css','','', 'screen' );
+    wp_register_style( 'fa-regular', get_template_directory_uri() . '/css/regular.min.css','','', 'screen' );
+    wp_register_style( 'fa-solid', get_template_directory_uri() . '/css/solid.min.css','','', 'screen' );
 
-	wp_enqueue_script( 'site-common' );
-	wp_enqueue_style( 'main-css' );
+    wp_enqueue_script( 'site-common' );
+    wp_enqueue_style( 'main-css' );
+    wp_enqueue_style( 'fa' );
+    wp_enqueue_style( 'fa-all' );
+    wp_enqueue_style( 'fa-brand' );
+    wp_enqueue_style( 'fa-light' );
+    wp_enqueue_style( 'main-regular' );
+    wp_enqueue_style( 'main-solid' );
+
 }
 
 add_action('wp_enqueue_scripts', 'les_load_scripts');
@@ -152,7 +165,21 @@ function twentyten_posted_in() {
 }
 endif;
 
-
+/***************************************************
+/ Sidebars
+/***************************************************/
+add_action( 'widgets_init', 'lesp_widgets_init' );
+function lesp_widgets_init() {
+    register_sidebar( array(
+        'name' => __( 'Shop', 'lesp' ),
+        'id' => 'shop',
+        'description' => __( 'Widgets in this area will be shown on shop pages.', 'lesp' ),
+        'before_widget' => '<li id="%1$s" class="widget %2$s">',
+	    'after_widget'  => '</li>',
+	    'before_title'  => '<h2 class="widgettitle">',
+	    'after_title'   => '</h2>',
+    ) );
+}
 
 /***************************************************
 / HTML5 Placeholders for Comments Form

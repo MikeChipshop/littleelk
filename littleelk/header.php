@@ -148,9 +148,9 @@
     <div class="lesp_wrap">
         <div class="lesp_header-social">
             <ul>
-                <li><a href="#">I</a></li>
-                <li><a href="#">F</a></li>
-                <li><a href="#">T</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
             </ul>
         </div>
         <nav><ul><?php wp_nav_menu( array('theme_location' => 'main_menu' )); ?></ul></nav>
@@ -158,8 +158,32 @@
             <ul>
                 <li><a href="#" class="lesp-header-sub-search"><i class="fas fa-search"></i></a></li>
                 <li><a href="#" class="lesp-header-sub-heart"><i class="fas fa-heart"></i></a></li>
-                <li><a href="#" class="lesp-header-sub-bag"><i class="fas fa-shopping-bag"></i></a></li>
-                <li><a href="#">Login</a></li>
+                <li>
+                    <?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' )))): ?>
+                        <?php
+                            $count = WC()->cart->cart_contents_count;
+                            if ( $count == 0 ):
+                        ?>
+                            <a class="lesp-header-sub-bag" href="<?php echo WC()->cart->get_cart_url(); ?>" title="View your shopping bag">
+                                <i class="fas fa-shopping-bag"></i>
+                            </a>
+                        <?php elseif ( $count === 1 ): ?>
+                            <a class="lesp-header-sub-bag" href="<?php echo WC()->cart->get_cart_url(); ?>" title="View your shopping cart">
+                                <i class="fas fa-shopping-bag"></i><span class="cart-contents-count"><div><?php echo esc_html( $count ); ?></div></span>
+                            </a>
+                        <?php else: ?>
+                            <a class="lesp-header-sub-bag" href="<?php echo WC()->cart->get_cart_url(); ?>" title="View your shopping cart">
+                                <i class="fas fa-shopping-bag"></i><span class="cart-contents-count"><div><?php echo esc_html( $count ); ?></div></span>
+                            </a>
+                        <?php endif; ?>
+                    <?php endif; ?>    
+                <li>
+                    <?php if ( is_user_logged_in() ): ?>
+                        <a href="<?php bloginfo('url'); ?>/my-account/customer-logout/">Log Out</a>
+                    <?php else: ?>
+                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">Login</a>
+                    <?php endif; ?>
+                </li>
             </ul>
         </div>
     </div>
