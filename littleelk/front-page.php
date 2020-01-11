@@ -83,43 +83,5 @@ $args = array(
             No content in loop
 <?php endif; ?>
 -->
-
-    <section class="lesp_instagram-list">
-        <div class="lesp_wrap">
-            <ul>
-                <li>
-                    <a href="#">
-                        <div class="lesp_image-wrap">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/test.jpg">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="lesp_image-wrap">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/test.jpg">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="lesp_image-wrap">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/test.jpg">
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <div class="lesp_image-wrap">
-                        <img src="<?php bloginfo('stylesheet_directory'); ?>/img/test.jpg">
-                        </div>
-                    </a>
-                </li>
-            </ul>
-            <h1 class="lesp_home-section-title">Instagram</h1>
-        </div>
-    </section>
-
-
 </main>
 <?php get_footer(); ?>
