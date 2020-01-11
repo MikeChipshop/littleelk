@@ -157,7 +157,7 @@
         <div class="lesp_header-sub-nav">
             <ul>
                 <li><a href="#" class="lesp-header-sub-search"><i class="fas fa-search"></i></a></li>
-                <li><a href="#" class="lesp-header-sub-heart"><i class="fas fa-heart"></i></a></li>
+                <li><a href="https://www.littleelk.uk/wishlist/" class="lesp-header-sub-heart"><i class="fas fa-heart"></i></a></li>
                 <li>
                     <?php if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' )))): ?>
                         <?php
@@ -176,7 +176,7 @@
                                 <i class="fas fa-shopping-bag"></i><span class="cart-contents-count"><div><?php echo esc_html( $count ); ?></div></span>
                             </a>
                         <?php endif; ?>
-                    <?php endif; ?>    
+                    <?php endif; ?>
                 <li>
                     <?php if ( is_user_logged_in() ): ?>
                         <a href="<?php bloginfo('url'); ?>/my-account/customer-logout/">Log Out</a>
