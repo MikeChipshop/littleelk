@@ -144,8 +144,18 @@
         </div>
     </div>
 </header>
+<div class="lesp_mobile-nav">
+    <button class="les_mobile-menu-toggle"><i class="fas fa-bars"></i><span>Menu</span></button>
+    <div Class="les_mobile-nav-search">
+        <form>
+            <input type="text" value="Search...">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+</div>
 <div class="lesp_global-nav">
     <div class="lesp_wrap">
+        <button class="les_mobile-menu-toggle"><span>Close</span><i class="far fa-times"></i></button>
         <div class="lesp_header-social">
             <ul>
                 <li><a href="#"><i class="fab fa-instagram"></i></a></li>
@@ -179,13 +189,13 @@
                     <?php endif; ?>
                 <li>
                     <?php if ( is_user_logged_in() ): ?>
-                        <a href="<?php bloginfo('url'); ?>/my-account/customer-logout/">Log Out</a>
+                        <a href="<?php bloginfo('url'); ?>/my-account/customer-logout/" title="Sign Out"><i class="fas fa-sign-out"></i></a>
                     <?php else: ?>
-                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>">Login</a>
+                        <a href="<?php echo get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>" title="Login"><i class="fas fa-sign-in"></i></a>
                     <?php endif; ?>
                 </li>
             </ul>
         </div>
     </div>
 </div>
-<div class="lesp_nav-announcement"><a href="#" class="lesp_popup-toggle">Psssst...We Have Some News <i class="fas fa-comment"></i></a></div>
+<div class="lesp_nav-announcement"><a href="#" class="lesp_popup-toggle"><span>Psssst...We Have Some News</span><i class="fas fa-comment"></i></a></div>
