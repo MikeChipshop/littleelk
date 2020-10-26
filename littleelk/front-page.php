@@ -1,13 +1,50 @@
 <?php get_header(); ?>
-<section class="lesp_home-hero">
-    <div class="lesp_wrap">
-        <div class="lesp_home-hero-container">
-            <a href="#">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/img/banner.png">
-            </a>
+<?php $i = 0; ?>
+<?php if( have_rows('front_page_banner') ): ?>
+    <section class="lesp_home-hero">
+        <div class="lesp_wrap">
+            <div class="lesp_home-hero-container">
+                <?php while ( have_rows('front_page_banner') ) : the_row(); ?>
+                    <div class="lesp_slider-item">
+                        <?php
+                            // Desktop Image
+                            $attachment_id = get_sub_field('banner_item_image');
+                            $size = "slide-d";
+                            $image = wp_get_attachment_image_src( $attachment_id, $size );
+                            $alt = get_post_meta($attachment_id, '_wp_attachment_image_alt', true);
+
+                            // Mobile Image
+                            $attachment_id_mobile = get_sub_field('banner_item_image_mobile');
+                            $size_mobile = "slide-m";
+                            $image_mobile = wp_get_attachment_image_src( $attachment_id_mobile, $size_mobile );
+                            $alt_mobile = get_post_meta($attachment_id_mobile, '_wp_attachment_image_alt', true);
+                        ?>                    
+                        <style>
+                            #lesp_slide-<?php echo $i; ?> {
+                                background:url('<?php echo $image[0]; ?>') no-repeat center center;
+                                background-size:cover;
+                                padding-bottom: 35.4609929078%;
+                                display:block;
+                            }
+                            @media only screen and (max-width : 720px)  { 
+                                #lesp_slide-<?php echo $i; ?> {
+                                    background:url('<?php echo $image_mobile[0]; ?>') no-repeat center center;
+                                    background-size:cover;
+                                    padding-bottom:120%;
+                                    display:block;
+                                }
+                            }
+                        </style>
+                        <a href="<?php the_sub_field('banner_item_link'); ?>" title="<?php the_sub_field('banner_item_title'); ?>" id="lesp_slide-<?php echo $i; ?>">
+                            <h2><?php the_sub_field('banner_item_title'); ?></h2>
+                        </a>
+                    </div>
+                    <?php $i++; ?>
+                <?php endwhile; ?>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+<?php endif; ?>
 
 <main class="lesp_front-page-main">
     <section>
@@ -37,7 +74,7 @@
                                 <img src="<?php echo $image[0]; ?>">
                                 </div>
                                 <h2><?php echo $category->name; ?></h2>
-                            </a>
+                            </a>                            
                         </li>
                     <?php endforeach; ?>
                 </ul>

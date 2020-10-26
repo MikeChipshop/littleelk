@@ -11,4 +11,15 @@ jQuery(document).ready(function( $ ) {
         $('body').toggleClass('menu-active');
         e.preventDefault();
     });
+
+    // Home slider
+    $(".lesp_home-hero-container").lightSlider({
+        item: 1,
+        slideMargin: 0,
+        mode: "fade",
+        auto: true,
+        loop: true,
+        pause: 8000,
+        pager:  true
+    }); 
 });

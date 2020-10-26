@@ -1,3 +1,6 @@
+<div class="lesp_footer-insta">
+    <?php echo do_shortcode('[instagram-feed]'); ?>
+</div>
 <footer class="lesp_global-footer">
     <div class="lesp_wrap">
 

@@ -151,12 +151,6 @@ if ( function_exists( 'register_nav_menus' ) ) {
   	register_nav_menus(
   		array(
 			'main_menu' => 'Main Menu',
-			'footer_menu_1' => 'Footer Menu 1',
-			'footer_menu_2' => 'Footer Menu 2',
-			'footer_menu_3' => 'Footer Menu 3',
-			'footer_menu_4' => 'Footer Menu 4',
-			'footer_menu_5' => 'Footer Menu 5',
-			'footer_menu_lower' => 'Footer Menu Lower',
   		)
   	);
 }

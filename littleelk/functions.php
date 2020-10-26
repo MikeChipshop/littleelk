@@ -14,7 +14,9 @@ if ( function_exists( 'add_image_size' ) ) add_theme_support( 'post-thumbnails' 
 
 if ( function_exists( 'add_image_size' ) ) {
     add_image_size( 'regular-square', 500, 500, array( 'center', 'center' ));
-    add_image_size( 'home-square', 380, 380, array( 'center', 'center' ));
+	add_image_size( 'home-square', 380, 380, array( 'center', 'center' ));
+	add_image_size( 'slide-d', 1400, 486);
+	add_image_size( 'slide-m', 700, 840);
 }
 
 /****************************************************
@@ -22,23 +24,15 @@ ENQUEUES
 *****************************************************/
 function les_load_scripts() {
 
-	wp_register_script( 'site-common', get_template_directory_uri() . '/js/site-common.js', array('jquery'),'null',true  );
+	wp_register_script( 'site-common', get_template_directory_uri() . '/js/site-common.js', array('jquery'),'null',true  );	
+	wp_register_script( 'sliderjs', get_template_directory_uri() . '/js/lightslider.min.js', array('jquery'),'',true  );
     wp_register_style( 'main-css', get_template_directory_uri() . '/style.css','',time(), 'screen' );
-    wp_register_style( 'fa', get_template_directory_uri() . '/css/fontawesome.min.css','','', 'screen' );
-    wp_register_style( 'fa-all', get_template_directory_uri() . '/css/all.min.css','','', 'screen' );
-    wp_register_style( 'fa-brand', get_template_directory_uri() . '/css/brands.min.css','','', 'screen' );
-    wp_register_style( 'fa-light', get_template_directory_uri() . '/css/light.min.css','','', 'screen' );
-    wp_register_style( 'fa-regular', get_template_directory_uri() . '/css/regular.min.css','','', 'screen' );
-    wp_register_style( 'fa-solid', get_template_directory_uri() . '/css/solid.min.css','','', 'screen' );
+    wp_register_style( 'slidercss', get_template_directory_uri() . '/css/lightslider.min.css','','', 'screen' );
 
     wp_enqueue_script( 'site-common' );
+	wp_enqueue_script( 'sliderjs' );
     wp_enqueue_style( 'main-css' );
-    wp_enqueue_style( 'fa' );
-    wp_enqueue_style( 'fa-all' );
-    wp_enqueue_style( 'fa-brand' );
-    wp_enqueue_style( 'fa-light' );
-    wp_enqueue_style( 'main-regular' );
-    wp_enqueue_style( 'main-solid' );
+    wp_enqueue_style( 'slidercss' );
 
 }
 
